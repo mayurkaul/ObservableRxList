@@ -1,0 +1,2 @@
+include ':app', ':rxobservablelist'
+project(':rxobservablelist').projectDir = new File(settingsDir, '../library/rxobservablelist')
