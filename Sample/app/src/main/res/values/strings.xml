@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">SampleRxObservableList</string>
+    <string name="app_name">Observable Block Chain</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_root">BlockChain</string>
+    <string name="please_enter_block_text">Please enter Block text</string>
+    <string name="currHash">Current Hash: %1$s</string>
+    <string name="prevHash">Previous Hash: %1$s</string>
 </resources>

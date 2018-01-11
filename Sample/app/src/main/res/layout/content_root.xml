@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".RootActivity"
+    tools:showIn="@layout/activity_root">
+
+
+    <com.github.mayurkaul.rxobservablelist.sample.adapter.RxRecyclerView
+        android:id="@+id/mainRecyclerView"
+        android:layout_above="@id/inputlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.github.mayurkaul.rxobservablelist.sample.adapter.RxRecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputlayout"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        >
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/please_enter_block_text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <io.rmiri.buttonloading.ButtonLoading
+            android:id="@+id/btnAddBlock"
+            android:focusable="true"
+            android:layout_below="@id/inputbox"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:BL_backgroundColor="#80FF0000"
+            app:BL_circleColor="#00AFEF"
+            app:BL_circleColorSecond="#8000AFEF"
+            app:BL_enable="true"
+            app:BL_stateShow="normal"
+            app:BL_text="Add Text"
+            app:BL_textColor="#FFFFFF"
+            app:BL_textSize="14sp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

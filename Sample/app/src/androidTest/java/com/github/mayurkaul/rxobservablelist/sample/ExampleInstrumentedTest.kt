@@ -1,4 +1,4 @@
-package sample.rxobservablelist.mayurkaul.github.com.samplerxobservablelist
+package com.github.mayurkaul.rxobservablelist.sample
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

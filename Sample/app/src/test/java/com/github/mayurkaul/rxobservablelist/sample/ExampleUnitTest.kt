@@ -1,4 +1,4 @@
-package sample.rxobservablelist.mayurkaul.github.com.samplerxobservablelist
+package com.github.mayurkaul.rxobservablelist.sample
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.ril.jio.jioboardsdk.system
+package com.github.mayurkaul.rxobservablelist
 
 import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.Subject
@@ -11,7 +11,7 @@ internal abstract class RxBaseObject<T> {
 
     abstract fun getKey(): T
 
-    fun setStatus(status:STATUS)
+    fun setStatus(status: STATUS)
     {
         mStatusObservable.onNext(status);
     }
