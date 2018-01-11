@@ -42,6 +42,25 @@ public class ObservableRxListMap<V, T extends RxBaseObject<V>> implements Iterab
         this.subject = PublishProcessor.create();
     }
 
+    private ObservableRxListMap(List<T> list){
+        this.list = Collections.synchronizedList(list);
+        this.hashMap = new LinkedHashMap<>();
+        this.subject = PublishProcessor.create();
+    }
+
+    public static <V,T extends RxBaseObject<V>>ObservableRxListMap<V,T> convert(List<T> list)
+    {
+        ObservableRxListMap<V, T> returnList = new ObservableRxListMap<>(list);
+        returnList.initMap();
+        return returnList;
+    }
+
+    private void initMap() {
+        for (T value :
+                this.list) {
+            hashMap.put(value.getKey(),value);
+        }
+    }
 
     public void add(@NonNull T value, int pos) {
         if(value == null || value.getKey()==null){

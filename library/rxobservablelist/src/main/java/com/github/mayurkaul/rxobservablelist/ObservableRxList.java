@@ -21,6 +21,16 @@ public class ObservableRxList<T> implements Iterable<T> {
         this.subject = PublishProcessor.create();
     }
 
+    private ObservableRxList(List<T> list){
+        this.list = Collections.synchronizedList(list);
+        this.subject = PublishProcessor.create();
+    }
+
+    public static <T>ObservableRxList<T> wrap(List<T> list)
+    {
+        return new ObservableRxList<>(list);
+    }
+
     public void add(T value) {
         list.add(value);
         subject.onNext(new ObservableRxListMap.RxList<T>(ObservableRxListMap.ChangeType.ADD, value,list.size()-1));
