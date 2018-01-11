@@ -12,7 +12,7 @@ ext {
 
     libraryDescription = 'A library to create an Observable List or an Observable Map for faster searching'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'mayurkoul2002'
     developerName = 'Mayur Kaul'
